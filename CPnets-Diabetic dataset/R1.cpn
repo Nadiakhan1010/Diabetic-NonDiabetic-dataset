@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE workspaceElements PUBLIC "-//CPN//DTD CPNXML 1.0//EN" "http://cpntools.org/DTD/6/cpn.dtd">
+
+<workspaceElements>
+  <generator tool="CPN Tools"
+             version="4.0.1"
+             format="6"/>
+  <cpnet>
+    <globbox>
+      <block id="ID1412310166">
+        <id>Standard priorities</id>
+        <ml id="ID1412310255">val P_HIGH = 100;
+          <layout>val P_HIGH = 100;</layout>
+        </ml>
+        <ml id="ID1412310292">val P_NORMAL = 1000;
+          <layout>val P_NORMAL = 1000;</layout>
+        </ml>
+        <ml id="ID1412310322">val P_LOW = 10000;
+          <layout>val P_LOW = 10000;</layout>
+        </ml>
+      </block>
+      <block id="ID1">
+        <id>Standard declarations</id>
+        <color id="ID85042">
+          <id>UNIT</id>
+          <unit/>
+          <layout>colset UNIT = unit;</layout>
+        </color>
+        <color id="ID4">
+          <id>BOOL</id>
+          <bool/>
+        </color>
+        <color id="ID3">
+          <id>INT</id>
+          <int/>
+        </color>
+        <color id="ID1412312409">
+          <id>INTINF</id>
+          <intinf/>
+          <layout>colset INTINF = intinf;</layout>
+        </color>
+        <color id="ID1412312425">
+          <id>TIME</id>
+          <time/>
+          <layout>colset TIME = time;</layout>
+        </color>
+        <color id="ID1412322990">
+          <id>REAL</id>
+          <real/>
+          <layout>colset REAL = real;</layout>
+        </color>
+        <color id="ID5">
+          <id>STRING</id>
+          <string/>
+        </color>
+        <color id="ID1412415325">
+          <id>AGE</id>
+          <alias>
+            <id>INT</id>
+          </alias>
+          <layout>colset AGE = INT;</layout>
+        </color>
+        <color id="ID1414577368">
+          <id>GEN</id>
+          <alias>
+            <id>INT</id>
+          </alias>
+          <layout>colset GEN = INT;</layout>
+        </color>
+        <color id="ID1415065122">
+          <id>SR</id>
+          <alias>
+            <id>INT</id>
+          </alias>
+          <layout>colset SR = INT;</layout>
+        </color>
+        <color id="ID1414578034">
+          <id>HYP</id>
+          <alias>
+            <id>INT</id>
+          </alias>
+          <layout>colset HYP = INT;</layout>
+        </color>
+        <color id="ID1412800524">
+          <id>BMI</id>
+          <alias>
+            <id>REAL</id>
+          </alias>
+          <layout>colset BMI = REAL;</layout>
+        </color>
+        <color id="ID1415060184">
+          <id>HBA</id>
+          <alias>
+            <id>REAL</id>
+          </alias>
+          <layout>colset HBA =  REAL;</layout>
+        </color>
+        <color id="ID1415064930">
+          <id>HD</id>
+          <alias>
+            <id>INT</id>
+          </alias>
+          <layout>colset HD = INT;</layout>
+        </color>
+        <color id="ID1415060187">
+          <id>BGL</id>
+          <alias>
+            <id>INT</id>
+          </alias>
+          <layout>colset BGL= INT;</layout>
+        </color>
+        <color id="ID1415065315">
+          <id>SH</id>
+          <alias>
+            <id>INT</id>
+          </alias>
+          <layout>colset SH = INT;</layout>
+        </color>
+        <color id="ID1415062060">
+          <id>L</id>
+          <string/>
+          <layout>colset L = string;</layout>
+        </color>
+        <color id="ID1412664624">
+          <id>P</id>
+          <product>
+            <id>SR</id>
+            <id>GEN</id>
+            <id>AGE</id>
+            <id>HYP</id>
+            <id>SH</id>
+            <id>HD</id>
+            <id>BMI</id>
+            <id>HBA</id>
+            <id>BGL</id>
+            <id>L</id>
+          </product>
+          <layout>colset P = product SR*GEN*AGE*HYP*SH*HD*BMI*HBA*BGL*L;</layout>
+        </color>
+        <var id="ID1412416313">
+          <type>
+            <id>INT</id>
+          </type>
+          <id>sr</id>
+          <layout>var sr : INT;</layout>
+        </var>
+        <var id="ID1412437406">
+          <type>
+            <id>AGE</id>
+          </type>
+          <id>age</id>
+          <layout>var age : AGE;</layout>
+        </var>
+        <var id="ID1415060954">
+          <type>
+            <id>GEN</id>
+          </type>
+          <id>gen</id>
+          <layout>var gen : GEN;</layout>
+        </var>
+        <var id="ID1414578097">
+          <type>
+            <id>HYP</id>
+          </type>
+          <id>hyp</id>
+          <layout>var hyp : HYP;</layout>
+        </var>
+        <var id="ID1415075197">
+          <type>
+            <id>HD</id>
+          </type>
+          <id>hd</id>
+          <layout>var hd : HD;</layout>
+        </var>
+        <var id="ID1415075956">
+          <type>
+            <id>SH</id>
+          </type>
+          <id>sh</id>
+          <layout>var sh : SH;</layout>
+        </var>
+        <var id="ID1415061909">
+          <type>
+            <id>BMI</id>
+          </type>
+          <id>bmi</id>
+          <layout>var bmi : BMI;</layout>
+        </var>
+        <var id="ID1415061911">
+          <type>
+            <id>HBA</id>
+          </type>
+          <id>hba</id>
+          <layout>var hba : HBA;</layout>
+        </var>
+        <var id="ID1415061913">
+          <type>
+            <id>BGL</id>
+          </type>
+          <id>bgl</id>
+          <layout>var bgl : BGL;</layout>
+        </var>
+        <var id="ID1412658933">
+          <type>
+            <id>L</id>
+          </type>
+          <id>label</id>
+          <layout>var label : L;</layout>
+        </var>
+      </block>
+    </globbox>
+    <page id="ID6">
+      <pageattr name="DSBC"/>
+      <place id="ID1412415160">
+        <posattr x="-489.000000"
+                 y="168.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>A</text>
+        <ellipse w="78.000000"
+                 h="74.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
+        <marking x="-30.500000"
+                 y="-51.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="3"
+                anchor.vertical="1"/>
+        </marking>
+        <type id="ID1412415161">
+          <posattr x="-547.000000"
+                   y="170.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">P</text>
+        </type>
+        <initmark id="ID1415077852">
+          <posattr x="-331.000000"
+                   y="889.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">1`(1,1,65,0,1,0,27.32,4.5,140,&quot;ND&quot;)++
+1`(2,0,54,0,0,0,27.32,5.8,126,&quot;ND&quot;)++
+1`(3,1,47,0,0,4,23.19,3.5,145,&quot;ND&quot;)++
+1`(4,0,5,0,0,0,21.65,4.0,140,&quot;ND&quot;)++
+1`(5,0,54,0,0,0,53.72,4.8,126,&quot;ND&quot;)++
+1`(6,1,61,0,0,0,27.32,4.8,126,&quot;ND&quot;)++
+1`(7,1,74,0,0,0,31.10,6.5,200,&quot;ND&quot;)++
+1`(8,0,78,0,0,4,29.77,6.0,200,&quot;ND&quot;)++
+1`(9,0,14,0,0,4,20.13,6.1,126,&quot;ND&quot;)++
+1`(10,1,77,1,0,1,40.44,6.2,160,&quot;ND&quot;)++
+1`(11,0,37,0,0,0,27.18,6.6,100,&quot;ND&quot;)++
+1`(12,0,30,0,0,2,29.44,4.5,85,&quot;ND&quot;)++
+1`(13,0,4,1,0,0,19.02,5.0,200,&quot;ND&quot;)++
+1`(14,0,22,0,0,4,19.67,4.5,100,&quot;ND&quot;)++
+1`(15,1,30,0,0,0,27.32,5.7,159,&quot;ND&quot;)++
+1`(16,0,36,0,0,0,27.25,6.2,159,&quot;ND&quot;)++
+1`(17,0,61,0,0,0,23.38,6.0,145,&quot;ND&quot;)++
+1`(18,0,27,0,0,4,28.89,3.5,140,&quot;ND&quot;)++
+1`(19,1,60,0,0,2,29.41,6.5,159,&quot;ND&quot;)++
+1`(20,1,42,1,0,3,35.58,6.5,200,&quot;ND&quot;)++
+1`(21,0,58,0,0,3,33.70,6.5,159,&quot;ND&quot;)++
+1`(22,0,21,0,0,4,24.29,5.0,80,&quot;ND&quot;)++
+1`(23,1,22,0,0,0,27.32,6.0,145,&quot;ND&quot;)++
+1`(24,0,61,0,0,4,27.32,5.0,126,&quot;ND&quot;)++
+1`(25,0,80,1,1,4,27.32,5.7,200,&quot;ND&quot;)++
+1`(26,1,6,0,0,0,14.54,4.8,159,&quot;ND&quot;)++
+1`(27,0,6,0,0,0,16.41,6.0,85,&quot;ND&quot;)++
+1`(28,1,15,0,0,4,32.69,6.0,140,&quot;ND&quot;)++
+1`(29,0,12,0,0,1,18.18,3.5,200,&quot;ND&quot;)++
+1`(30,0,80,0,0,3,23.38,6.5,160,&quot;ND&quot;)++
+1`(31,0,17,0,0,2,22.90,6.1,130,&quot;ND&quot;)++
+1`(32,0,25,0,0,2,22.90,4.5,140,&quot;ND&quot;)++
+1`(33,1,50,0,0,0,46.61,6.2,126,&quot;ND&quot;)++
+1`(34,0,3,0,0,0,27.32,4.0,159,&quot;ND&quot;)++
+1`(35,1,72,0,0,1,27.32,6.2,80,&quot;ND&quot;)++
+1`(36,1,44,0,0,0,27.32,5.8,155,&quot;ND&quot;)++
+1`(37,1,36,0,0,4,30.10,6.2,140,&quot;ND&quot;)++
+1`(38,1,45,0,0,3,27.32,6.2,160,&quot;ND&quot;)++
+1`(39,0,6,0,0,0,18.80,6.6,90,&quot;ND&quot;)++
+1`(40,0,63,1,0,4,42.13,4.8,155,&quot;ND&quot;)++
+1`(41,0,80,0,0,3,36.75,6.1,126,&quot;ND&quot;)++
+1`(42,0,55,1,0,3,23.63,6.5,158,&quot;ND&quot;)++
+1`(43,1,41,0,0,3,39.06,5.0,155,&quot;ND&quot;)++
+1`(44,0,35,0,0,2,22.67,4.5,85,&quot;ND&quot;)++
+1`(45,1,65,0,0,4,30.00,6.0,140,&quot;ND&quot;)++
+1`(46,0,45,0,0,0,27.32,6.6,159,&quot;ND&quot;)++
+1`(47,0,28,0,0,0,27.32,5.8,80,&quot;ND&quot;)++
+1`(48,0,34,0,0,0,35.96,5.8,158,&quot;ND&quot;)++
+1`(49,0,44,0,0,0,27.32,4.8,158,&quot;ND&quot;)++
+1`(50,1,3,0,0,0,20.27,5.7,100,&quot;ND&quot;)++
+1`(51,1,15,0,0,4,19.50,4.8,159,&quot;ND&quot;)++
+1`(52,1,62,0,0,4,31.90,5.7,200,&quot;ND&quot;)++
+1`(53,1,80,0,0,4,27.32,4.0,126,&quot;ND&quot;)++
+1`(54,0,76,1,0,5,24.44,5.7,130,&quot;ND&quot;)++
+1`(55,0,55,0,0,5,27.32,3.5,155,&quot;ND&quot;)++
+1`(56,0,28,0,0,4,23.13,5.8,100,&quot;ND&quot;)++
+1`(57,0,51,0,0,5,23.08,6.1,126,&quot;ND&quot;)++
+1`(58,0,80,0,0,5,32.76,5.7,130,&quot;ND&quot;)++
+1`(59,1,54,0,0,0,36.00,6.5,130,&quot;ND&quot;)++
+1`(60,0,36,0,0,1,29.97,4.5,145,&quot;ND&quot;)++
+1`(61,0,69,0,0,4,27.32,5.8,140,&quot;ND&quot;)++
+1`(62,0,26,1,0,4,51.52,3.5,159,&quot;ND&quot;)++
+1`(63,1,65,0,0,1,27.32,6.2,160,&quot;ND&quot;)++
+1`(64,0,37,0,0,0,42.36,3.5,160,&quot;ND&quot;)++
+1`(65,1,59,1,0,4,24.89,4.8,130,&quot;ND&quot;)++
+1`(66,0,80,0,0,0,27.32,4.5,155,&quot;ND&quot;)++
+1`(67,1,62,0,0,4,26.64,3.5,130,&quot;ND&quot;)++
+1`(68,0,23,0,0,4,22.91,3.5,160,&quot;ND&quot;)++
+1`(69,0,53,0,0,4,27.26,5.7,160,&quot;ND&quot;)++
+1`(70,0,58,0,0,3,35.56,4.5,155,&quot;ND&quot;)++
+1`(71,0,32,0,0,4,26.07,5.0,140,&quot;ND&quot;)++
+1`(72,0,5,0,0,4,16.94,4.0,145,&quot;ND&quot;)++
+1`(73,1,75,0,0,0,34.67,6.1,158,&quot;ND&quot;)++
+1`(74,0,49,0,0,4,30.83,8.8,145,&quot;D&quot;,)++
+1`(75,0,18,0,0,4,21.62,4.8,159,&quot;ND&quot;)++
+1`(76,1,66,0,0,3,27.37,4.0,140,&quot;ND&quot;)++
+1`(77,0,54,0,0,4,24.10,5.7,100,&quot;ND&quot;)++
+1`(78,0,55,0,0,4,47.20,5.8,145,&quot;ND&quot;)++
+1`(79,0,18,0,0,1,27.32,6.1,90,&quot;ND&quot;)++
+1`(80,1,41,0,0,0,36.55,4.0,158,&quot;ND&quot;)++
+1`(81,0,47,0,0,0,27.32,6.0,130,&quot;ND&quot;)++
+1`(82,1,13,0,0,4,30.78,5.0,145,&quot;ND&quot;)++
+1`(83,1,19,0,0,5,26.65,5.0,159,&quot;ND&quot;)++
+1`(84,0,39,0,0,0,27.32,5.8,200,&quot;ND&quot;)++
+1`(85,0,64,0,0,3,35.56,4.8,85,&quot;ND&quot;)++
+1`(86,1,51,1,0,4,23.68,6.0,140,&quot;ND&quot;)++
+1`(87,0,39,0,0,5,23.32,6.1,100,&quot;ND&quot;)++
+1`(88,0,6,0,0,4,13.50,4.5,80,&quot;ND&quot;)++
+1`(89,0,7,0,0,0,27.32,6.2,200,&quot;ND&quot;)++
+1`(90,1,39,0,0,5,15.47,6.0,90,&quot;ND&quot;)++
+1`(91,1,11,0,0,4,16.68,4.0,140,&quot;ND&quot;)++
+1`(92,0,57,0,0,4,30.60,5.0,155,&quot;ND&quot;)++
+1`(93,0,17,0,0,1,37.20,6.2,130,&quot;ND&quot;)++
+1`(94,0,63,0,0,1,27.32,6.6,130,&quot;ND&quot;)++
+1`(95,1,42,0,0,0,27.32,6.2,160,&quot;ND&quot;)++
+1`(96,0,49,0,0,0,27.32,6.0,130,&quot;ND&quot;)++
+1`(97,1,25,0,0,4,24.39,6.6,140,&quot;ND&quot;)++
+1`(98,0,32,0,0,0,33.37,6.1,200,&quot;ND&quot;)++
+1`(99,0,61,0,0,3,27.32,3.5,90,&quot;ND&quot;)</text>
+        </initmark>
+      </place>
+      <place id="ID1412440080">
+        <posattr x="278.000000"
+                 y="168.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>ND</text>
+        <ellipse w="76.000000"
+                 h="76.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
+        <marking x="44.500000"
+                 y="-11.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="1"
+                anchor.vertical="3"/>
+        </marking>
+        <type id="ID1412440081">
+          <posattr x="324.000000"
+                   y="168.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">P</text>
+        </type>
+        <initmark id="ID1412440082">
+          <posattr x="339.000000"
+                   y="204.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </initmark>
+      </place>
+      <trans id="ID1412790752"
+             explicit="false">
+        <posattr x="-113.000000"
+                 y="168.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Rule 1</text>
+        <box w="122.000000"
+             h="42.000000"/>
+        <binding x="7.200000"
+                 y="-3.000000"/>
+        <cond id="ID1412790753">
+          <posattr x="-113.000000"
+                   y="200.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">[bmi &lt;= 55.28]</text>
+        </cond>
+        <time id="ID1412790754">
+          <posattr x="-37.500000"
+                   y="200.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </time>
+        <code id="ID1412790755">
+          <posattr x="-17.500000"
+                   y="115.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </code>
+        <priority id="ID1412790757">
+          <posattr x="-212.000000"
+                   y="136.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </priority>
+      </trans>
+      <arc id="ID1412790888"
+           orientation="PtoT"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412790752"/>
+        <placeend idref="ID1412415160"/>
+        <bendpoint id="ID1412791010"
+                   serial="1">
+          <posattr x="-336.000000"
+                   y="168.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+        </bendpoint>
+        <annot id="ID1412790889">
+          <posattr x="-316.000000"
+                   y="179.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">(sr,gen,age,hyp,hd,sh,bmi,hba,bgl,label)</text>
+        </annot>
+      </arc>
+      <arc id="ID1415070576"
+           orientation="TtoP"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412790752"/>
+        <placeend idref="ID1412440080"/>
+        <annot id="ID1415071325">
+          <posattr x="94.000000"
+                   y="179.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">(sr,gen,age,hyp,hd,sh,bmi,hba,bgl,label)</text>
+        </annot>
+      </arc>
+      <constraints/>
+    </page>
+    <instances>
+      <instance id="ID2149"
+                page="ID6"/>
+    </instances>
+    <options>
+      <option name="realtimestamp">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="fair_be">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="global_fairness">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="outputdirectory">
+        <value>
+          <text>&lt;same as model&gt;</text>
+        </value>
+      </option>
+      <option name="extensions.10003.enable">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="extensions.10005.enable">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="extensions.10001.enable">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="extensions.10006.enable">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="extensions.10002.enable">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repavg">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repciavg">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repcount">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="repfirstval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="replastval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="repmax">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repmin">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repssquare">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="repssqdev">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="repstddev">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repsum">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="repvariance">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="avg">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="ciavg">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="count">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="firstval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="lastval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="max">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="min">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="ssquare">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="ssqdev">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="stddev">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="sum">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="variance">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="firstupdate">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="interval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="lastupdate">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedavg">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="untimedciavg">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedcount">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="untimedfirstval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedlastval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedmax">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="untimedmin">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="untimedssquare">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedssqdev">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedstddev">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedsum">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="untimedvariance">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+    </options>
+    <binders>
+      <cpnbinder id="ID1412671820"
+                 x="450"
+                 y="121"
+                 width="1016"
+                 height="601">
+        <sheets>
+          <cpnsheet id="ID2215"
+                    panx="151.980469"
+                    pany="206.492188"
+                    zoom="1.000000"
+                    instance="ID2149">
+            <zorder>
+              <position value="0"/>
+            </zorder>
+          </cpnsheet>
+        </sheets>
+        <zorder>
+          <position value="0"/>
+        </zorder>
+      </cpnbinder>
+    </binders>
+    <monitorblock name="Monitors"/>
+    <IndexNode expanded="true">
+      <IndexNode expanded="false"/>
+      <IndexNode expanded="false"/>
+      <IndexNode expanded="false">
+        <IndexNode expanded="false"/>
+        <IndexNode expanded="false"/>
+        <IndexNode expanded="false"/>
+        <IndexNode expanded="false"/>
+        <IndexNode expanded="false">
+          <IndexNode expanded="false">
+            <IndexNode expanded="false">
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+            </IndexNode>
+            <IndexNode expanded="false">
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+            </IndexNode>
+          </IndexNode>
+          <IndexNode expanded="false">
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+          </IndexNode>
+        </IndexNode>
+        <IndexNode expanded="false">
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+        </IndexNode>
+      </IndexNode>
+      <IndexNode expanded="false">
+        <IndexNode expanded="false"/>
+      </IndexNode>
+      <IndexNode expanded="true">
+        <IndexNode expanded="false">
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+        </IndexNode>
+        <IndexNode expanded="true">
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+        </IndexNode>
+      </IndexNode>
+      <IndexNode expanded="false"/>
+      <IndexNode expanded="true"/>
+    </IndexNode>
+  </cpnet>
+</workspaceElements>
